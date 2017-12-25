@@ -1,0 +1,20 @@
+table{
+    background-color: #5A4743;
+    margin: auto;
+}
+td{
+    width: 100px;
+    height: 100px;
+}
+.br{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.b{
+    border-bottom: 1px solid black;
+}
+
+.r{
+    border-right: 1px solid black;
+}
