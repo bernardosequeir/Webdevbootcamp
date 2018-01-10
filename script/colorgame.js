@@ -16,7 +16,7 @@ for( var i = 0; i<squares.length;i++){
 
         if(clickedColor === pickedColor){
             resetButton.textContent = "Play Again?";
-            message.textContent="Congratulations!";
+            message.textContent="Correct!";
             changeColors(pickedColor);
             h1.style.backgroundColor= pickedColor;
         }else{
@@ -78,20 +78,21 @@ function createColor(){
 function restart(){
     if (hardMode){
         colors = generateRandomColors(6); 
-        for(var i = colors.length ;i<squares.length;i++){
+        for(var i = 3 ;i<squares.length;i++){
             squares[i].style.display = "block";
         }   
     }else{
         colors = generateRandomColors(3);
-        for(var i = colors.length ;i<squares.length;i++){
+        for(var i = 3 ;i<squares.length;i++){
             squares[i].style.display = "none";
         }
     }
+    
     resetButton.textContent="New Colors";
     
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
-    h1.style.backgroundColor = " #232323";
+    h1.style.backgroundColor = "steelblue";
     message.textContent =  "    ";  
     for(var i = 0; i <squares.length;i++){
         squares[i].style.backgroundColor = colors[i]
